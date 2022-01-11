@@ -10,5 +10,9 @@ public class AccountOpenController {
 	public String showAccountOpenScreen() {
 		return "account_open";
 	}
+	@RequestMapping("/login")
+	public String showLoginScreen() {
+		return "account_open";
 
+}
 }
