@@ -10,8 +10,9 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = {"com.bankuii.controller"})
+@ComponentScan(basePackages = {"com.bankuii.controller","com.bankuii.beans"})
 public class Servletconfig implements WebMvcConfigurer{
+	
 
 	@Bean
 	public InternalResourceViewResolver viewResolver(){
@@ -19,7 +20,7 @@ public class Servletconfig implements WebMvcConfigurer{
 		viewResolver.setPrefix("WEB-INF/jsps/"); //WEB-INF/jsps/index.jsp
 		viewResolver.setSuffix(".jsp");
 		return viewResolver;
-	}
+	} 
 	 
 	
 	}
