@@ -1,5 +1,5 @@
 package com.bankuii.controller;
 
-public class CustomerController {
+public class StatementController {
 
 }

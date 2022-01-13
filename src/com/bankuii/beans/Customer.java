@@ -5,16 +5,18 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Customer {
-
-	private Long id;
+	
+	private Long id; 
 	private String name;
+	private String address;
 	private String city;
 	private String panNumber;
-	private String address;
 	
 	@Autowired
 	private UserInfo userInfo;
-
+	
+	@Autowired
+	private Account account;
 
 	public Long getId() {
 		return id;
@@ -30,6 +32,14 @@ public class Customer {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
 	}
 
 	public String getCity() {
@@ -48,14 +58,6 @@ public class Customer {
 		this.panNumber = panNumber;
 	}
 
-	public String getAddress() {
-		return address;
-	}
-
-	public void setAddress(String address) {
-		this.address = address;
-	}
-
 	public UserInfo getUserInfo() {
 		return userInfo;
 	}
@@ -72,14 +74,11 @@ public class Customer {
 		this.account = account;
 	}
 
-	@Autowired
-	private Account account;
-
-
 	@Override
 	public String toString() {
-		return "Customer [id=" + id + ", name=" + name + ", city=" + city + ", panNumber=" + panNumber + ", address="
-				+ address + ", userInfo=" + userInfo + ", account=" + account + "]";
+		return "Customer [id=" + id + ", name=" + name + ", address=" + address + ", city=" + city + ", panNumber="
+				+ panNumber + ", userInfo=" + userInfo + ", account=" + account + "]";
 	}
+	
 	
 }
